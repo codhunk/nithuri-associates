@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description: "One Platform for Real Estate, Business Guidance, Legal Advisory & Social Welfare by Bageshwar Singh.",
 };
 
+import { CookieBanner } from "@/components/CookieBanner";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,6 +30,7 @@ export default function RootLayout({
         className={`${outfit.variable} ${inter.variable} antialiased font-sans`}
       >
         {children}
+        <CookieBanner />
       </body>
     </html>
   );
