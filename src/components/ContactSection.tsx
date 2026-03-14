@@ -1,77 +1,82 @@
 "use client";
 
 import React from "react";
-import { Send, Phone, Mail, MapPin, MessageSquare } from "lucide-react";
+import { Send, Phone, Mail, MapPin } from "lucide-react";
 
 export function ContactSection() {
     return (
         <section id="contact" className="py-24 bg-white dark:bg-primary">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="grid lg:grid-cols-2 gap-16">
-                    <div>
-                        <span className="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">Contact Us</span>
-                        <h2 className="text-4xl font-bold text-primary dark:text-white mb-6">Let's Build Something <span className="text-accent">Great</span> Together</h2>
-                        <p className="text-primary/60 dark:text-white/60 mb-10 text-lg">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
+                    <div className="order-2 lg:order-1">
+                        <span className="text-accent font-bold uppercase tracking-widest text-xs sm:text-sm mb-3 sm:mb-4 block text-center lg:text-left">Contact Us</span>
+                        <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-white mb-4 sm:mb-6 text-center lg:text-left">Let's Build Something <span className="text-accent">Great</span> Together</h2>
+                        <p className="text-primary/60 dark:text-white/60 mb-8 sm:mb-10 text-base sm:text-lg text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
                             Whether you're looking for land, starting a business, or seeking free social assistance, our doors are always open.
                         </p>
 
-                        <div className="space-y-8 mb-12">
-                            <div className="flex items-start gap-6">
-                                <div className="bg-accent/10 p-4 rounded-2xl text-accent">
-                                    <Phone size={24} />
+                        <div className="flex flex-col gap-6 sm:gap-8 mb-10 sm:mb-12">
+                            <div className="flex items-center sm:items-start gap-4 sm:gap-6 bg-gray-50 dark:bg-white/5 p-4 sm:p-0 sm:bg-transparent sm:dark:bg-transparent rounded-2xl">
+                                <div className="bg-accent/10 p-3 sm:p-4 rounded-xl sm:rounded-2xl text-accent flex-shrink-0">
+                                    <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                                 </div>
-                                <div>
-                                    <h4 className="font-bold text-primary dark:text-white mb-1">Call Us</h4>
-                                    <p className="text-primary/60 dark:text-white/60">+91 9839605273, 7007717074</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-6">
-                                <div className="bg-growth/10 p-4 rounded-2xl text-growth">
-                                    <Mail size={24} />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-primary dark:text-white mb-1">Email Us</h4>
-                                    <p className="text-primary/60 dark:text-white/60">bageshwarsingh1525@gmail.com</p>
+                                <div className="flex-1">
+                                    <h4 className="font-bold text-sm sm:text-base text-primary dark:text-white mb-0.5 sm:mb-1">Call Us</h4>
+                                    <p className="text-xs sm:text-sm text-primary/60 dark:text-white/60 font-semibold">+91 9839605273, 7007717074</p>
                                 </div>
                             </div>
 
-                            <div className="flex items-start gap-6">
-                                <div className="bg-primary/5 p-4 rounded-2xl text-primary dark:text-white/20 dark:text-white">
-                                    <MapPin size={24} />
+                            <div className="flex items-center sm:items-start gap-4 sm:gap-6 bg-gray-50 dark:bg-white/5 p-4 sm:p-0 sm:bg-transparent sm:dark:bg-transparent rounded-2xl">
+                                <div className="bg-growth/10 p-3 sm:p-4 rounded-xl sm:rounded-2xl text-growth flex-shrink-0">
+                                    <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                                 </div>
-                                <div>
-                                    <h4 className="font-bold text-primary dark:text-white mb-1">Our Office</h4>
-                                    <p className="text-primary/60 dark:text-white/60">Nithuri Singh & Sons Associates, Rural Development Block</p>
+                                <div className="flex-1">
+                                    <h4 className="font-bold text-sm sm:text-base text-primary dark:text-white mb-0.5 sm:mb-1">Email Us</h4>
+                                    <p className="text-xs sm:text-sm text-primary/60 dark:text-white/60 font-semibold break-all">bageshwarsingh1525@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center sm:items-start gap-4 sm:gap-6 bg-gray-50 dark:bg-white/5 p-4 sm:p-0 sm:bg-transparent sm:dark:bg-transparent rounded-2xl">
+                                <div className="bg-primary/5 p-3 sm:p-4 rounded-xl sm:rounded-2xl text-primary dark:text-white/20 dark:text-white flex-shrink-0">
+                                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
+                                </div>
+                                <div className="flex-1">
+                                    <h4 className="font-bold text-sm sm:text-base text-primary dark:text-white mb-0.5 sm:mb-1">Our Office</h4>
+                                    <p className="text-xs sm:text-sm text-primary/60 dark:text-white/60 font-semibold leading-relaxed">Nithuri Singh & Sons Associates, Rural Development Block</p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Google Maps Placeholder */}
-                        <div className="w-full h-64 bg-slate-100 rounded-2xl overflow-hidden border border-primary/5 shadow-inner flex items-center justify-center dark:bg-white/5">
+                        {/* <div className="w-full h-64 bg-slate-100 rounded-2xl overflow-hidden border border-primary/5 shadow-inner flex items-center justify-center dark:bg-white/5">
                             <div className="text-center">
                                 <MapPin className="mx-auto mb-2 text-primary/20 dark:text-white/20" size={48} />
                                 <p className="text-xs text-primary/40 dark:text-white/40 font-bold uppercase tracking-widest">Google Maps Integration</p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
-                    <div className="bg-cream p-10 rounded-3xl dark:bg-white/5 border border-primary/5 shadow-xl">
-                        <h3 className="text-2xl font-bold text-primary dark:text-white mb-8">Send a Message</h3>
-                        <form className="space-y-6">
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <label className="block text-xs font-bold uppercase tracking-widest text-primary/50 dark:text-white/50 mb-2">Full Name</label>
-                                    <input type="text" className="w-full bg-white dark:bg-primary border border-primary/10 rounded-xl p-4 focus:ring-2 focus:ring-accent outline-none dark:text-white" placeholder="John Doe" />
+                    <div className="order-1 lg:order-2 bg-white dark:bg-[#1e293b] p-6 sm:p-8 lg:p-10 rounded-[2rem] shadow-2xl border border-gray-100 dark:border-white/5 relative overflow-hidden">
+                        {/* Decorative blob inside form card */}
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+
+                        <h3 className="text-2xl sm:text-3xl font-black text-primary dark:text-white mb-2 relative z-10">Send a Message</h3>
+                        <p className="text-sm text-primary/60 dark:text-white/60 mb-8 font-semibold relative z-10">We usually respond within 2-4 business hours.</p>
+
+                        <form className="space-y-5 relative z-10">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div className="space-y-1.5">
+                                    <label className="block text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500 dark:text-white/50 pl-1">Full Name</label>
+                                    <input type="text" className="w-full bg-[#f8fafc] dark:bg-[#0f172a] border-transparent rounded-xl p-3.5 sm:p-4 text-sm font-semibold focus:bg-white dark:focus:bg-[#0f172a] focus:ring-2 focus:ring-accent outline-none dark:text-white transition-all" placeholder="John Doe" />
                                 </div>
-                                <div>
-                                    <label className="block text-xs font-bold uppercase tracking-widest text-primary/50 dark:text-white/50 mb-2">Phone Number</label>
-                                    <input type="tel" className="w-full bg-white dark:bg-primary border border-primary/10 rounded-xl p-4 focus:ring-2 focus:ring-accent outline-none dark:text-white" placeholder="+91 0000000000" />
+                                <div className="space-y-1.5">
+                                    <label className="block text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500 dark:text-white/50 pl-1">Phone Number</label>
+                                    <input type="tel" className="w-full bg-[#f8fafc] dark:bg-[#0f172a] border-transparent rounded-xl p-3.5 sm:p-4 text-sm font-semibold focus:bg-white dark:focus:bg-[#0f172a] focus:ring-2 focus:ring-accent outline-none dark:text-white transition-all" placeholder="+91 00000 00000" />
                                 </div>
                             </div>
-                            <div>
-                                <label className="block text-xs font-bold uppercase tracking-widest text-primary/50 dark:text-white/50 mb-2">Subject</label>
-                                <select className="w-full bg-white dark:bg-primary border border-primary/10 rounded-xl p-4 focus:ring-2 focus:ring-accent outline-none dark:text-white">
+                            <div className="space-y-1.5">
+                                <label className="block text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500 dark:text-white/50 pl-1">Subject inquiry</label>
+                                <select className="w-full bg-[#f8fafc] dark:bg-[#0f172a] border-transparent rounded-xl p-3.5 sm:p-4 text-sm font-semibold focus:bg-white dark:focus:bg-[#0f172a] focus:ring-2 focus:ring-accent outline-none dark:text-white transition-all appearance-none cursor-pointer">
                                     <option>Real Estate Inquiry</option>
                                     <option>Business Consultancy</option>
                                     <option>Legal Advisory</option>
@@ -79,29 +84,19 @@ export function ContactSection() {
                                     <option>Other</option>
                                 </select>
                             </div>
-                            <div>
-                                <label className="block text-xs font-bold uppercase tracking-widest text-primary/50 dark:text-white/50 mb-2">Message</label>
-                                <textarea rows={4} className="w-full bg-white dark:bg-primary border border-primary/10 rounded-xl p-4 focus:ring-2 focus:ring-accent outline-none dark:text-white" placeholder="How can we help you?"></textarea>
+                            <div className="space-y-1.5">
+                                <label className="block text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500 dark:text-white/50 pl-1">Message Detail</label>
+                                <textarea rows={4} className="w-full bg-[#f8fafc] dark:bg-[#0f172a] border-transparent rounded-xl p-3.5 sm:p-4 text-sm font-semibold focus:bg-white dark:focus:bg-[#0f172a] focus:ring-2 focus:ring-accent outline-none dark:text-white transition-all resize-none" placeholder="How can we help you?"></textarea>
                             </div>
-                            <button className="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-light transition-all shadow-lg dark:bg-accent dark:text-primary">
+                            <button className="w-full bg-primary hover:bg-[#1e293b] text-white py-4 sm:py-5 rounded-xl font-black uppercase tracking-widest text-xs flex items-center justify-center gap-2 transition-all shadow-xl shadow-primary/20 dark:bg-accent dark:hover:bg-amber-400 dark:text-primary mt-4 group">
                                 Send Message
-                                <Send size={18} />
+                                <Send size={16} className="group-hover:translate-x-1 transition-transform" />
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
 
-            {/* Floating WhatsApp Button */}
-            <a
-                href="https://wa.me/919839605273"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 flex items-center gap-2"
-            >
-                <MessageSquare size={24} />
-                <span className="font-bold hidden md:inline">Chat with Us</span>
-            </a>
         </section>
     );
 }

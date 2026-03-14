@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500', '700', '900'],
   subsets: ["latin"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -18,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 import { CookieBanner } from "@/components/CookieBanner";
+import { WhatsAppWidget } from "@/components/WhatsAppWidget";
 
 export default function RootLayout({
   children,
@@ -27,10 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${outfit.variable} ${inter.variable} antialiased font-sans`}
+        className={`${roboto.variable} antialiased font-sans`}
       >
         {children}
         <CookieBanner />
+        <WhatsAppWidget />
       </body>
     </html>
   );

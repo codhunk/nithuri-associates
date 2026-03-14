@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Outfit", var(--font-geist-sans);
-  --font-heading: "Inter", var(--font-geist-sans);
+  --font-sans: var(--font-roboto), "Roboto", Arial, Helvetica, sans-serif;
+  --font-heading: var(--font-roboto), "Roboto", Arial, Helvetica, sans-serif;
 
   --color-primary: #0f172a;
   /* Slate 900 - Dark Blue */
@@ -47,6 +47,11 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
+}
+
+html {
+  /* Fluid typography: scales dynamically between 12px on mobile to 16px on large screens */
+  font-size: clamp(12px, 0.5vw + 10px, 16px);
 }
 
 @media (prefers-color-scheme: dark) {

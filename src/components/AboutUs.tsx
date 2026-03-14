@@ -20,7 +20,7 @@ export function AboutUs() {
                         </div>
                         {/* Experience Badge */}
                         <div className="absolute -right-8 -bottom-8 bg-accent p-8 rounded-2xl shadow-2xl z-20 text-primary hidden md:block">
-                            <span className="text-4xl font-extrabold block">25+</span>
+                            <span className="text-3xl font-extrabold block">25+</span>
                             <span className="text-sm font-bold uppercase tracking-widest">Years of Trust</span>
                         </div>
                         {/* Grid Pattern decorative */}
@@ -29,10 +29,10 @@ export function AboutUs() {
 
                     <div>
                         <span className="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">About the Organization</span>
-                        <h2 className="text-4xl lg:text-5xl font-bold text-primary dark:text-white mb-6 leading-tight">
+                        <h2 className="text-3xl lg:text-4xl font-bold text-primary dark:text-white mb-6 leading-tight">
                             A Legacy of <span className="text-growth">Excellence</span> and <span className="text-accent">Social Impact</span>
                         </h2>
-                        <p className="text-primary/70 dark:text-white/70 mb-8 text-lg leading-relaxed">
+                        <p className="text-primary/70 dark:text-white/70 mb-8 text-sm leading-relaxed">
                             Nithuri Singh & Sons Associates has been a cornerstone in Real Estate and Social Services for over two decades.
                             Under the leadership of Bageshwar Singh, we empower individuals through accurate information,
                             strategic guidance, and exclusive investment opportunities.
