@@ -34,8 +34,8 @@ export function ProcessFlow() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <span className="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">How We Work</span>
-                    <h2 className="text-4xl font-bold text-primary dark:text-white mb-6">Our <span className="text-accent">Scientific</span> Approach</h2>
-                    <p className="text-primary/60 dark:text-white/60 text-lg">
+                    <h2 className="text-3xl font-bold text-primary dark:text-white mb-4">Our <span className="text-accent">Scientific</span> Approach</h2>
+                    <p className="text-primary/60 dark:text-white/60 text-base">
                         We follow a transparent, multi-step methodology to ensure every project meets the highest standards of trust and profitability.
                     </p>
                 </div>
@@ -47,8 +47,8 @@ export function ProcessFlow() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
                         {steps.map((step, idx) => (
                             <div key={idx} className="relative group text-center lg:text-left">
-                                <div className="inline-flex w-20 h-20 rounded-[2rem] bg-white dark:bg-white/5 border border-primary/5 shadow-sm items-center justify-center text-accent mb-8 group-hover:bg-accent group-hover:text-primary transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6 relative z-10">
-                                    <step.icon size={32} />
+                                <div className="inline-flex w-18 h-18 rounded-[2rem] bg-white dark:bg-white/5 border border-primary/5 shadow-sm items-center justify-center text-accent mb-8 group-hover:bg-accent group-hover:text-primary transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6 relative z-10">
+                                    <step.icon size={28} />
                                     <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-white text-[10px] font-bold flex items-center justify-center dark:bg-white dark:text-primary border-2 border-cream dark:border-primary">
                                         {step.number}
                                     </span>
