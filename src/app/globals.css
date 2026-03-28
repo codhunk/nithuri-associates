@@ -49,18 +49,6 @@
   --foreground: #0f172a;
 }
 
-html {
-  /* Fluid typography: scales dynamically between 12px on mobile to 16px on large screens */
-  font-size: clamp(12px, 0.5vw + 10px, 16px);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #020617;
-    --foreground: #f8fafc;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -83,10 +71,6 @@ h6 {
   background-size: 24px 24px;
 }
 
-.dark .bg-dot-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-}
-
 .bg-mesh-gradient {
   background: linear-gradient(-45deg, #f59e0b20, #10b98120, #3b82f620, #8b5cf620);
   background-size: 400% 400%;
@@ -101,23 +85,17 @@ h6 {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.dark .glass-premium {
-  background: rgba(2, 6, 23, 0.3);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-}
-
 
 .text-gradient-gold {
   background: linear-gradient(to right, #f59e0b, #d97706);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-emerald {
   background: linear-gradient(to right, #10b981, #059669);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }

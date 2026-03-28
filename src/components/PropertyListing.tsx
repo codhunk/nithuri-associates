@@ -49,19 +49,19 @@ export function PropertyListing() {
         : properties.filter(p => p.type === filter);
 
     return (
-        <section id="properties" className="py-24 bg-white dark:bg-primary">
+        <section id="properties" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
                     <div className="max-w-xl">
                         <span className="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">Available Projects</span>
-                        <h2 className="text-4xl font-bold text-primary dark:text-white mb-4">Explore Premium <span className="text-accent">Properties</span></h2>
-                        <p className="text-primary/60 dark:text-white/60">
+                        <h2 className="text-4xl font-bold text-primary mb-4">Explore Premium <span className="text-accent">Properties</span></h2>
+                        <p className="text-primary/60 leading-relaxed">
                             Verified land and commercial opportunities vetted by our legal experts for a secure investment.
                         </p>
                     </div>
                     <button
                         onClick={() => setIsModalOpen(true)}
-                        className="bg-primary text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-primary-light transition-all dark:bg-accent dark:text-primary"
+                        className="bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 transition-all shadow-xl shadow-primary/20 active:scale-95"
                     >
                         <Plus size={20} />
                         List Your Property
@@ -80,8 +80,8 @@ export function PropertyListing() {
                             className={cn(
                                 "px-6 py-2 rounded-full text-sm font-bold transition-all border",
                                 filter === f
-                                    ? "bg-accent border-accent text-primary shadow-lg"
-                                    : "bg-transparent border-primary/10 text-primary/60 hover:border-accent dark:border-white/10 dark:text-white/60"
+                                    ? "bg-accent border-accent text-white shadow-lg shadow-accent/20"
+                                    : "bg-white border-primary/10 text-primary/60 hover:border-accent hover:text-accent"
                             )}
                         >
                             {f}
@@ -92,35 +92,35 @@ export function PropertyListing() {
                 {/* Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredProperties.map(property => (
-                        <div key={property.id} className="group bg-cream dark:bg-white/5 rounded-3xl overflow-hidden border border-primary/5 hover:shadow-2xl transition-all duration-500">
+                        <div key={property.id} className="group bg-cream/30 rounded-[2.5rem] overflow-hidden border border-primary/5 hover:shadow-2xl transition-all duration-500 hover:bg-white">
                             <div className="relative h-64 overflow-hidden">
                                 <img
                                     src={property.image}
                                     alt={property.title}
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 />
-                                <div className="absolute top-4 left-4 bg-accent text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">
+                                <div className="absolute top-4 left-4 bg-accent text-white text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
                                     {property.tag}
                                 </div>
                             </div>
                             <div className="p-8">
                                 <div className="flex items-center gap-2 text-accent mb-4">
                                     <MapPin size={16} />
-                                    <span className="text-xs font-bold uppercase tracking-tighter">{property.location}</span>
+                                    <span className="text-xs font-bold uppercase tracking-widest">{property.location}</span>
                                 </div>
-                                <h3 className="text-xl font-bold text-primary dark:text-white mb-2">{property.title}</h3>
+                                <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">{property.title}</h3>
                                 <div className="flex items-center justify-between mt-6 pt-6 border-t border-primary/5">
-                                    <div className="flex items-center gap-1 text-growth font-extrabold text-lg">
+                                    <div className="flex items-center gap-1 text-growth font-extrabold text-xl">
                                         <IndianRupee size={18} />
                                         <span>{property.price}</span>
                                     </div>
-                                    <div className="text-xs font-bold text-primary/40 dark:text-white/40 uppercase tracking-widest">
+                                    <div className="text-xs font-bold text-primary/40 uppercase tracking-widest">
                                         {property.area}
                                     </div>
                                 </div>
                                 <button
                                     onClick={() => setSelectedProperty(property)}
-                                    className="w-full mt-6 bg-white dark:bg-primary border border-primary/10 dark:border-white/10 py-3 rounded-xl font-bold text-primary dark:text-white hover:bg-accent hover:border-accent hover:text-primary transition-all"
+                                    className="w-full mt-6 bg-white border border-primary/10 py-3 rounded-xl font-bold text-primary hover:bg-accent hover:border-accent hover:text-white transition-all shadow-sm"
                                 >
                                     View Details
                                 </button>

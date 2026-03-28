@@ -55,7 +55,7 @@ export default function AddPropertyPage() {
     };
 
     return (
-        <main className="min-h-screen flex items-center justify-center relative bg-[#Fdfaf4] dark:bg-gray-900 p-4 font-sans py-20 md:py-24">
+        <main className="min-h-screen flex items-center justify-center relative bg-[#Fdfaf4] p-4 font-sans py-20 md:py-24">
             {/* Background design elements */}
             <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
                 <div className="absolute top-[10%] left-[10%] w-[30%] h-[30%] bg-emerald-500/10 blur-[150px] rounded-full opacity-60" />
@@ -63,7 +63,7 @@ export default function AddPropertyPage() {
             </div>
 
             {/* Navigation back */}
-            <Link href="/" className="absolute top-6 left-6 md:top-8 md:left-8 z-20 flex items-center gap-2 text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors font-bold text-xs md:text-sm tracking-widest uppercase">
+            <Link href="/" className="absolute top-6 left-6 md:top-8 md:left-8 z-20 flex items-center gap-2 text-gray-500 hover:text-gray-800 transition-colors font-bold text-xs md:text-sm tracking-widest uppercase">
                 <ArrowLeft size={16} className="w-4 h-4 md:w-5 md:h-5" />
                 <span className="hidden sm:inline">Back</span>
             </Link>
@@ -73,17 +73,17 @@ export default function AddPropertyPage() {
                 initial={{ opacity: 0, scale: 0.95, y: 10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="relative z-10 w-full max-w-4xl bg-white dark:bg-[#0f172a] rounded-[2rem] shadow-2xl flex flex-col md:flex-row overflow-hidden"
+                className="relative z-10 w-full max-w-4xl bg-white rounded-[2rem] shadow-2xl flex flex-col md:flex-row overflow-hidden"
             >
                 {/* Left Side: Instructions Panel */}
-                <div className="hidden md:flex flex-col w-5/12 bg-emerald-50 dark:bg-[#1e293b] p-10 relative isolate border-r border-emerald-100 dark:border-white/5">
-                    <div className="w-14 h-14 rounded-2xl bg-white dark:bg-[#0f172a] shadow-lg flex items-center justify-center mb-6">
-                        <Building2 className="text-emerald-500 dark:text-emerald-400" size={28} />
+                <div className="hidden md:flex flex-col w-5/12 bg-emerald-50 p-10 relative isolate border-r border-emerald-100">
+                    <div className="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center mb-6">
+                        <Building2 className="text-emerald-500" size={28} />
                     </div>
-                    <h2 className="text-2xl font-black text-primary dark:text-white mb-4">
+                    <h2 className="text-2xl font-black text-primary mb-4">
                         List Your Premium Asset
                     </h2>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-8 leading-relaxed font-semibold">
+                    <p className="text-sm text-gray-600 mb-8 leading-relaxed font-semibold">
                         Provide accurate details to attract the right buyers. Our verification team will review your submission within 24 hours.
                     </p>
                     
@@ -98,8 +98,8 @@ export default function AddPropertyPage() {
                                     <CheckCircle2 className="text-emerald-500" size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-sm text-primary dark:text-white">{item.title}</h4>
-                                    <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mt-1">{item.desc}</p>
+                                    <h4 className="font-bold text-sm text-primary">{item.title}</h4>
+                                    <p className="text-xs font-semibold text-gray-500 mt-1">{item.desc}</p>
                                 </div>
                             </li>
                         ))}
@@ -107,12 +107,12 @@ export default function AddPropertyPage() {
                 </div>
 
                 {/* Right Side: Form Area */}
-                <div className="flex-1 p-6 md:p-12 bg-white dark:bg-[#0f172a]">
+                <div className="flex-1 p-6 md:p-12 bg-white">
                     <div className="md:hidden text-center mb-8">
-                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-[#1e293b] mb-4">
+                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-emerald-50 mb-4">
                             <Building2 className="text-emerald-500 w-6 h-6" />
                         </div>
-                        <h1 className="text-2xl font-black text-primary dark:text-white mb-2">
+                        <h1 className="text-2xl font-black text-primary mb-2">
                             Upload Property
                         </h1>
                     </div>
@@ -120,7 +120,7 @@ export default function AddPropertyPage() {
                     <form className="grid grid-cols-1 md:grid-cols-2 gap-5" onSubmit={(e) => e.preventDefault()}>
                         {/* Basic Details */}
                         <div className="md:col-span-2 space-y-1.5">
-                            <label className="text-sm font-bold text-gray-600 dark:text-gray-300 pl-1">Property Title</label>
+                            <label className="text-sm font-bold text-gray-600 pl-1">Property Title</label>
                             <div className="relative">
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                     <Info size={18} className="text-gray-400" />
@@ -128,13 +128,13 @@ export default function AddPropertyPage() {
                                 <input
                                     type="text"
                                     placeholder="E.g. Modern Villa in Downtown"
-                                    className="w-full bg-[#f1f5f9] dark:bg-[#1e293b] border-transparent rounded-xl py-3.5 pl-12 pr-4 text-primary dark:text-white placeholder:text-gray-400 focus:bg-white dark:focus:bg-[#0f172a] focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all font-sans text-sm outline-none"
+                                    className="w-full bg-[#f1f5f9] border-transparent rounded-xl py-3.5 pl-12 pr-4 text-primary placeholder:text-gray-400 focus:bg-white focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all font-sans text-sm outline-none"
                                 />
                             </div>
                         </div>
 
                         <div className="space-y-1.5">
-                            <label className="text-sm font-bold text-gray-600 dark:text-gray-300 pl-1">Location</label>
+                            <label className="text-sm font-bold text-gray-600 pl-1">Location</label>
                             <div className="relative">
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                     <MapPin size={18} className="text-gray-400" />
@@ -142,13 +142,13 @@ export default function AddPropertyPage() {
                                 <input
                                     type="text"
                                     placeholder="City or Region"
-                                    className="w-full bg-[#f1f5f9] dark:bg-[#1e293b] border-transparent rounded-xl py-3.5 pl-12 pr-4 text-primary dark:text-white placeholder:text-gray-400 focus:bg-white dark:focus:bg-[#0f172a] focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all font-sans text-sm outline-none"
+                                    className="w-full bg-[#f1f5f9] border-transparent rounded-xl py-3.5 pl-12 pr-4 text-primary placeholder:text-gray-400 focus:bg-white focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all font-sans text-sm outline-none"
                                 />
                             </div>
                         </div>
 
                         <div className="space-y-1.5">
-                            <label className="text-sm font-bold text-gray-600 dark:text-gray-300 pl-1">Estimated Value</label>
+                            <label className="text-sm font-bold text-gray-600 pl-1">Estimated Value</label>
                             <div className="relative">
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                     <DollarSign size={18} className="text-gray-400" />
@@ -156,14 +156,14 @@ export default function AddPropertyPage() {
                                 <input
                                     type="text"
                                     placeholder="Price in ₹"
-                                    className="w-full bg-[#f1f5f9] dark:bg-[#1e293b] border-transparent rounded-xl py-3.5 pl-12 pr-4 text-primary dark:text-white placeholder:text-gray-400 focus:bg-white dark:focus:bg-[#0f172a] focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all font-sans text-sm outline-none"
+                                    className="w-full bg-[#f1f5f9] border-transparent rounded-xl py-3.5 pl-12 pr-4 text-primary placeholder:text-gray-400 focus:bg-white focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all font-sans text-sm outline-none"
                                 />
                             </div>
                         </div>
 
                         <div className="space-y-1.5">
-                            <label className="text-sm font-bold text-gray-600 dark:text-gray-300 pl-1">Property Type</label>
-                            <select className="w-full bg-[#f1f5f9] dark:bg-[#1e293b] border-transparent rounded-xl py-3.5 px-4 text-primary dark:text-white focus:bg-white dark:focus:bg-[#0f172a] focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all font-sans text-sm appearance-none cursor-pointer outline-none">
+                            <label className="text-sm font-bold text-gray-600 pl-1">Property Type</label>
+                            <select className="w-full bg-[#f1f5f9] border-transparent rounded-xl py-3.5 px-4 text-primary focus:bg-white focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all font-sans text-sm appearance-none cursor-pointer outline-none">
                                 <option>Residential Land</option>
                                 <option>Commercial Property</option>
                                 <option>Agricultural Land</option>
@@ -172,11 +172,11 @@ export default function AddPropertyPage() {
                         </div>
 
                         <div className="space-y-1.5">
-                            <label className="text-sm font-bold text-gray-600 dark:text-gray-300 pl-1">Total Area</label>
+                            <label className="text-sm font-bold text-gray-600 pl-1">Total Area</label>
                             <input
                                 type="text"
                                 placeholder="E.g. 2400 sq.ft / 5 Acres"
-                                className="w-full bg-[#f1f5f9] dark:bg-[#1e293b] border-transparent rounded-xl py-3.5 px-4 text-primary dark:text-white placeholder:text-gray-400 focus:bg-white dark:focus:bg-[#0f172a] focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all font-sans text-sm outline-none"
+                                className="w-full bg-[#f1f5f9] border-transparent rounded-xl py-3.5 px-4 text-primary placeholder:text-gray-400 focus:bg-white focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all font-sans text-sm outline-none"
                             />
                         </div>
 
@@ -197,13 +197,13 @@ export default function AddPropertyPage() {
                                 onDragLeave={handleDragLeave}
                                 className={`border-2 border-dashed rounded-xl p-8 flex flex-col items-center justify-center transition-all cursor-pointer group text-center
                                     ${isDragging 
-                                        ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-500/10" 
-                                        : "border-gray-200 dark:border-white/10 bg-[#f1f5f9]/50 dark:bg-[#1e293b]/50 hover:bg-[#f1f5f9] dark:hover:bg-[#1e293b]"}`}
+                                        ? "border-emerald-500 bg-emerald-50" 
+                                        : "border-gray-200 bg-[#f1f5f9]/50 hover:bg-[#f1f5f9]"}`}
                             >
-                                <div className={`w-14 h-14 rounded-full flex items-center justify-center mb-4 transition-transform duration-300 ${isDragging ? "bg-emerald-500 text-white scale-110" : "bg-white dark:bg-[#0f172a] text-gray-400 shadow-sm group-hover:-translate-y-1"}`}>
+                                <div className={`w-14 h-14 rounded-full flex items-center justify-center mb-4 transition-transform duration-300 ${isDragging ? "bg-emerald-500 text-white scale-110" : "bg-white text-gray-400 shadow-sm group-hover:-translate-y-1"}`}>
                                     <UploadCloud className="w-6 h-6" />
                                 </div>
-                                <p className="text-sm font-bold text-primary dark:text-white mb-1">
+                                <p className="text-sm font-bold text-primary mb-1">
                                     {isDragging ? "Drop images here" : "Click or drag to upload property images"}
                                 </p>
                                 <p className="text-[10px] uppercase font-bold tracking-widest text-gray-400">SVG, PNG, JPG or WEBP (max. 5MB)</p>
@@ -213,7 +213,7 @@ export default function AddPropertyPage() {
                             {previewUrls.length > 0 && (
                                 <div className="mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
                                     {previewUrls.map((url, idx) => (
-                                        <div key={idx} className="relative aspect-square rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-white/10 group">
+                                        <div key={idx} className="relative aspect-square rounded-xl overflow-hidden shadow-sm border border-gray-100 group">
                                             <img src={url} alt={`Preview ${idx + 1}`} className="w-full h-full object-cover" />
                                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                                 <button 
@@ -232,11 +232,11 @@ export default function AddPropertyPage() {
 
                         {/* Description */}
                         <div className="md:col-span-2 space-y-1.5">
-                            <label className="text-sm font-bold text-gray-600 dark:text-gray-300 pl-1">Property Description</label>
+                            <label className="text-sm font-bold text-gray-600 pl-1">Property Description</label>
                             <textarea
                                 rows={3}
                                 placeholder="Provide details about the property, nearby landmarks, and legal status."
-                                className="w-full bg-[#f1f5f9] dark:bg-[#1e293b] border-transparent rounded-xl py-3.5 px-4 text-primary dark:text-white placeholder:text-gray-400 focus:bg-white dark:focus:bg-[#0f172a] focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all font-sans text-sm resize-none outline-none"
+                                className="w-full bg-[#f1f5f9] border-transparent rounded-xl py-3.5 px-4 text-primary placeholder:text-gray-400 focus:bg-white focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all font-sans text-sm resize-none outline-none"
                             />
                         </div>
 

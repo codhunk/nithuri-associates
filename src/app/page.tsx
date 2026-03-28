@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white dark:bg-[#020617] transition-colors duration-500 overflow-x-hidden">
+    <main className="min-h-screen bg-white transition-colors duration-500 overflow-x-hidden">
       <Navbar />
       <Hero />
 
@@ -62,7 +62,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="py-12 bg-cream dark:bg-white/5"
+        className="py-12 bg-cream"
       >
         <PropertyListing />
       </motion.div>
