@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export default function ServicesPage() {
     return (
-        <main className="min-h-screen bg-white dark:bg-primary">
+        <main className="min-h-screen bg-white">
             <Navbar />
             <div className="pt-20">
                 <Services />

@@ -18,7 +18,7 @@ export function WhatsAppWidget() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="mb-4 w-72 sm:w-80 bg-white dark:bg-[#1e293b] rounded-2xl shadow-2xl overflow-hidden border border-gray-100 dark:border-white/10"
+                        className="mb-4 w-72 sm:w-80 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100"
                     >
                         {/* Popup Header */}
                         <div className="bg-[#25D366] p-4 flex items-center justify-between shadow-sm relative z-20">
@@ -40,32 +40,32 @@ export function WhatsAppWidget() {
                         </div>
 
                         {/* WhatsApp Native Chat Body */}
-                        <div className="bg-[#E5DDD5] p-4 h-56 overflow-y-auto relative dark:bg-[#0f172a]/90">
+                        <div className="bg-[#E5DDD5] p-4 h-56 overflow-y-auto relative">
                             {/* Doodles Background */}
-                            <div className="absolute inset-0 opacity-[0.05] dark:opacity-10 pointer-events-none" style={{ backgroundImage: "url('https://i.pinimg.com/originals/ab/ab/60/abab60f06ab52fa78465d3e640c353c0.png')", backgroundSize: "300px" }}></div>
+                            <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "url('https://i.pinimg.com/originals/ab/ab/60/abab60f06ab52fa78465d3e640c353c0.png')", backgroundSize: "300px" }}></div>
                             
                             {/* Message Bubble */}
                             <motion.div 
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.2 }}
-                                className="bg-white dark:bg-[#1e293b] text-gray-800 dark:text-gray-200 p-3 pt-2.5 rounded-tr-xl rounded-b-xl max-w-[85%] text-[13px] shadow-sm relative z-10"
+                                className="bg-white text-gray-800 p-3 pt-2.5 rounded-tr-xl rounded-b-xl max-w-[85%] text-[13px] shadow-sm relative z-10"
                             >
-                                <p className="font-bold text-xs text-gray-500 dark:text-gray-400 mb-1">Nithuri Associates Support</p>
+                                <p className="font-bold text-xs text-xl text-gray-500 mb-1">Nithuri Associates Support</p>
                                 <p className="leading-snug pr-2">Hello! 👋 Welcome to Nithuri Singh & Sons Associates. How can we help you today with your real estate or consultancy needs?</p>
                                 <span className="text-[9px] text-gray-400 block text-right mt-1 font-semibold">{new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
                             </motion.div>
                         </div>
 
                         {/* Input Area */}
-                        <div className="bg-[#f0f2f5] dark:bg-[#1e293b] p-3 flex items-center gap-2 relative z-20">
+                        <div className="bg-[#f0f2f5] p-3 flex items-center gap-2 relative z-20">
                             <a 
                                 href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="w-full relative group block"
                             >
-                                <div className="w-full bg-white dark:bg-[#0f172a] rounded-full px-5 py-3 text-[13px] text-gray-400 border border-transparent group-hover:border-[#25D366]/30 transition-colors flex items-center justify-between shadow-sm cursor-text">
+                                <div className="w-full bg-white rounded-full px-5 py-3 text-[13px] text-gray-400 border border-transparent group-hover:border-[#25D366]/30 transition-colors flex items-center justify-between shadow-sm cursor-text">
                                     <span className="font-medium">Type a message...</span>
                                     <div className="bg-[#25D366] p-1.5 rounded-full text-white shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform">
                                         <Send size={14} className="ml-0.5" />
@@ -80,7 +80,7 @@ export function WhatsAppWidget() {
             {/* Bubble Button */}
             <button 
                 onClick={() => setIsOpen(!isOpen)}
-                className={`flex items-center gap-2 p-3 sm:px-4 sm:py-3.5 rounded-full shadow-[0_10px_25px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-105 active:scale-95 z-50 group hover:shadow-[0_10px_35px_rgba(37,211,102,0.5)] border-2 border-white/20 dark:border-[#25D366]/20 bg-[#25D366] text-white`}
+                className={`flex items-center gap-2 p-3 sm:px-4 sm:py-3.5 rounded-full shadow-[0_10px_25px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-105 active:scale-95 z-50 group hover:shadow-[0_10px_35px_rgba(37,211,102,0.5)] border-2 border-white/20 bg-[#25D366] text-white`}
             >
                 {isOpen ? (
                     <X size={24} className="mx-1" />

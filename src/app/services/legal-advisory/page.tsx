@@ -4,14 +4,14 @@ import { Scale, ShieldAlert, FileSearch, Gavel, CheckCircle2, Bookmark } from "l
 
 export default function LegalAdvisoryInformatics() {
     return (
-        <main className="min-h-screen bg-white dark:bg-primary">
+        <main className="min-h-screen bg-white">
             <Navbar />
             <div className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
                     <div>
                         <span className="text-accent font-bold uppercase tracking-widest text-sm mb-4 block">Service Informatics</span>
-                        <h1 className="text-5xl font-bold text-primary dark:text-white mb-8">Legal Title <span className="text-accent">Verification</span></h1>
-                        <p className="text-primary/60 dark:text-white/60 text-lg leading-relaxed mb-10">
+                        <h1 className="text-5xl font-bold text-primary mb-8">Legal Title <span className="text-accent">Verification</span></h1>
+                        <p className="text-primary/60 text-lg leading-relaxed mb-10">
                             Regional property transactions are often plagued by inheritance disputes and undocumented boundaries.
                             Our legal advisory wing specializes in clearing these bottlenecks before you invest.
                         </p>
@@ -27,15 +27,15 @@ export default function LegalAdvisoryInformatics() {
                                 { title: "Inheritance Clarity", desc: "Verifying that all heirs have consented to the sale to avoid family stays." },
                                 { title: "Demarcation (Shajra)", desc: "Matching physical boundaries with the village map records." }
                             ].map((item, idx) => (
-                                <div key={idx} className="p-5 bg-cream dark:bg-white/5 rounded-2xl border-l-4 border-accent">
-                                    <h4 className="font-bold text-primary dark:text-white mb-1">{item.title}</h4>
-                                    <p className="text-xs text-primary/60 dark:text-white/60 leading-relaxed">{item.desc}</p>
+                                <div key={idx} className="p-5 bg-cream rounded-2xl border-l-4 border-accent">
+                                    <h4 className="font-bold text-primary mb-1">{item.title}</h4>
+                                    <p className="text-xs text-primary/60 leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
 
-                    <div className="bg-[#0f172a] p-10 rounded-[3rem] text-white shadow-2xl">
+                    <div className="bg-primary p-10 rounded-[3rem] text-white shadow-2xl">
                         <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 text-red-400">
                             <ShieldAlert />
                             Common Pitfalls
@@ -64,9 +64,9 @@ export default function LegalAdvisoryInformatics() {
                         { label: "Title Search Reports", icon: Scale },
                         { label: "Documentation Help", icon: CheckCircle2 }
                     ].map((item, idx) => (
-                        <div key={idx} className="flex items-center gap-4 px-8 py-6 bg-white dark:bg-white/5 rounded-full border border-primary/5 shadow-sm">
+                        <div key={idx} className="flex items-center gap-4 px-8 py-6 bg-white rounded-full border border-primary/5 shadow-sm">
                             <item.icon className="text-accent" size={20} />
-                            <span className="font-bold text-sm">{item.label}</span>
+                            <span className="font-bold text-sm text-primary">{item.label}</span>
                         </div>
                     ))}
                 </div>

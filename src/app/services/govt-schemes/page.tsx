@@ -4,13 +4,13 @@ import { Heart, Search, Users, ExternalLink, Calendar, CheckCircle2 } from "luci
 
 export default function GovtSchemesInformatics() {
     return (
-        <main className="min-h-screen bg-white dark:bg-primary">
+        <main className="min-h-screen bg-white">
             <Navbar />
             <div className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
                 <div className="text-center max-w-4xl mx-auto mb-20">
                     <span className="text-growth font-bold uppercase tracking-widest text-sm mb-4 block">100% Free Social Service</span>
-                    <h1 className="text-5xl font-bold text-primary dark:text-white mb-8">Empowerment Through <span className="text-growth">Information</span></h1>
-                    <p className="text-primary/60 dark:text-white/60 text-lg leading-relaxed">
+                    <h1 className="text-5xl font-bold text-primary mb-8">Empowerment Through <span className="text-growth">Information</span></h1>
+                    <p className="text-primary/60 text-lg leading-relaxed">
                         Most government schemes fail to reach the intended beneficiaries due to lack of awareness and documentation complexity.
                         We bridge this gap with free consultancy.
                     </p>
@@ -30,10 +30,10 @@ export default function GovtSchemesInformatics() {
                                     { title: "MSME Registration (Udyam)", desc: "Enabling small businesses to access official govt benefits and low-interest loans.", link: "https://udyamregistration.gov.in/" },
                                     { title: "Regional Skill Development", desc: "Linking youth with PMKVY centers for vocational training and placement.", link: "https://www.pmkvyofficial.org/" }
                                 ].map((scheme, idx) => (
-                                    <div key={idx} className="p-8 bg-cream dark:bg-white/5 rounded-3xl border border-primary/5 group hover:border-growth/40 transition-all flex flex-col md:flex-row justify-between items-center gap-6">
+                                    <div key={idx} className="p-8 bg-cream rounded-3xl border border-primary/5 group hover:border-growth/40 transition-all flex flex-col md:flex-row justify-between items-center gap-6">
                                         <div>
-                                            <h3 className="font-bold text-xl mb-2">{scheme.title}</h3>
-                                            <p className="text-sm text-primary/60 dark:text-white/60 leading-relaxed">{scheme.desc}</p>
+                                            <h3 className="font-bold text-xl mb-2 text-primary">{scheme.title}</h3>
+                                            <p className="text-sm text-primary/60 leading-relaxed">{scheme.desc}</p>
                                         </div>
                                         <a href={scheme.link} target="_blank" className="bg-growth text-white px-6 py-3 rounded-xl font-bold text-xs flex items-center gap-2 shrink-0 group-hover:scale-105 transition-transform">
                                             Apply Info <ExternalLink size={14} />
@@ -70,11 +70,11 @@ export default function GovtSchemesInformatics() {
                         </section>
 
                         <div className="p-8 border border-growth/20 rounded-3xl bg-growth/5">
-                            <h4 className="font-bold mb-4 flex items-center gap-2">
+                            <h4 className="font-bold mb-4 flex items-center gap-2 text-primary">
                                 <Heart className="text-red-500" size={18} />
                                 Our Promise
                             </h4>
-                            <p className="text-xs text-primary/60 dark:text-white/60 leading-relaxed italic">
+                            <p className="text-xs text-primary/60 leading-relaxed italic">
                                 "We never charge a single rupee for government scheme assistance. This is our contribution to regional development."
                             </p>
                         </div>
@@ -82,10 +82,10 @@ export default function GovtSchemesInformatics() {
                 </div>
 
                 <div className="flex justify-center border-t border-primary/5 pt-12">
-                    <div className="flex flex-wrap gap-4 items-center bg-cream dark:bg-white/5 px-8 py-4 rounded-full border border-primary/5">
-                        <span className="text-xs font-bold text-primary/40 dark:text-white/40 uppercase tracking-widest">Required Documents:</span>
+                    <div className="flex flex-wrap gap-4 items-center bg-cream px-8 py-4 rounded-full border border-primary/5">
+                        <span className="text-xs font-bold text-primary/40 uppercase tracking-widest">Required Documents:</span>
                         {["Aadhaar Card", "PAN Card", "Residence Proof", "Income Certificate", "Ration Card"].map(doc => (
-                            <div key={doc} className="flex items-center gap-1.5 text-xs font-bold text-primary/80 dark:text-white/80">
+                            <div key={doc} className="flex items-center gap-1.5 text-xs font-bold text-primary/80">
                                 <CheckCircle2 className="text-growth" size={14} />
                                 {doc}
                             </div>
